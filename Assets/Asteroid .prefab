@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6276005894626822288}
   - component: {fileID: 1629289710140007939}
-  - component: {fileID: 7726850083697943774}
+  - component: {fileID: 3247295485698407505}
   m_Layer: 0
   m_Name: 'Asteroid '
   m_TagString: Untagged
@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 3104982045939902898}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.08, y: -0.04, z: 0}
+  m_LocalPosition: {x: -0.09, y: 0.06, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -88,7 +88,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &7726850083697943774
+--- !u!114 &3247295485698407505
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -97,6 +97,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 3104982045939902898}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 06c2dc732d8b9a64596d267f252182b6, type: 3}
+  m_Script: {fileID: 11500000, guid: d55b9b42c37df854d8247a5dd28c9039, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 1
+  speed: 0
