@@ -1,8 +1,8 @@
 using UnityEngine;
 
-public class Asteroids : MonoBehaviour
+public class AsteroidSpawn : MonoBehaviour
 {
-    public GameObject AsteroidSpawn;
+    public GameObject Asteroid;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {

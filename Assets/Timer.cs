@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class Timer : MonoBehaviour
+public class Timer : MonoBehaviour  
 {
     public float timer = 0.0f;
     float MaxTime = 16.0f;
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
-        
+        FindAnyObjectByType<AsteroidSpawn>();
     }
 
     // Update is called once per frame
@@ -20,11 +20,11 @@ public class Timer : MonoBehaviour
 
         if (timer == 0.0f) 
         {
-            //AsteroidSpawn
+            FindAnyObjectByType<AsteroidSpawn>().AsteroidSpawner();
         }
         if (timer == 4.0f)
         {
-            //AsteroidSpawn
+            FindAnyObjectByType<AsteroidSpawn>();
         }
         if (timer ==  8.0f)
         {
@@ -32,7 +32,7 @@ public class Timer : MonoBehaviour
         }
         if (timer == 12.0f)
         {
-            //AsteroidSpawn
+            FindAnyObjectByType<AsteroidSpawn>();
         }
         if (timer > MaxTime)
         {
