@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Projectile : MonoBehaviour
 {
-    public GameObject rect;
+    public GameObject Shot;
 
     //none of this works thus far
 
@@ -18,6 +18,6 @@ public class Projectile : MonoBehaviour
     }
     public void ProjectileVomit()
     {
-        Instantiate(rect);
+        Instantiate(Shot);
     }
 }

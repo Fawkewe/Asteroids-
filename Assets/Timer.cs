@@ -24,7 +24,7 @@ public class Timer : MonoBehaviour
         }
         if (timer == 4.0f)
         {
-            FindAnyObjectByType<AsteroidSpawn>();
+            FindAnyObjectByType<AsteroidSpawn>().AsteroidSpawner();
         }
         if (timer ==  8.0f)
         {
