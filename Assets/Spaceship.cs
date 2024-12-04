@@ -10,6 +10,11 @@ public class Spaceship : MonoBehaviour
 
     }
 
+    private void Awake()
+    {
+        FindAnyObjectByType<Projectile>();
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -34,24 +39,18 @@ public class Spaceship : MonoBehaviour
 
         if (Input.GetKey(KeyCode.Space))
         {
-            //Projectile Function 
+            FindAnyObjectByType<Projectile>().ProjectileVomit();
         }
 
-        if (transform.position.y > 5 )
+        //teleporter doesnt work. but here it is
+        if (transform.position.y > 5 || transform.position.y < -5)
         {
-            Position.y = -5;
+            Position.y *= -1;
         }
-        if (transform.position.y < -5)
+
+        if (transform.position.x > 10 || transform.position.x < -10)
         {
-            Position.y = 5; 
-        }
-        if (transform.position.x > 10 )
-        {
-            Position.x = -10;
-        }
-        if (transform.position.x < -10)
-        {
-            Position.x = 10;
+            Position.x *= -1;
         }
     }
 }
