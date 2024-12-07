@@ -5,8 +5,7 @@ using UnityEngine;
 
 public class Timer : MonoBehaviour  
 {
-    public float timer = 0.0f;
-    float MaxTime = 16.0f;
+    public float timer = 0.0f; //Calculates the seconds
     // Start is called before the first frame update
     void Awake()
     {
@@ -18,25 +17,9 @@ public class Timer : MonoBehaviour
     {
         timer += Time.deltaTime;
 
-        if (timer == 0.0f) 
+        if (timer%4== 0) //spawns every 4 seconds. 
         {
             FindAnyObjectByType<AsteroidSpawn>().AsteroidSpawner();
-        }
-        if (timer == 4.0f)
-        {
-            FindAnyObjectByType<AsteroidSpawn>().AsteroidSpawner();
-        }
-        if (timer ==  8.0f)
-        {
-            FindAnyObjectByType<AsteroidSpawn>().AsteroidSpawner();
-        }
-        if (timer == 12.0f)
-        {
-            FindAnyObjectByType<AsteroidSpawn>().AsteroidSpawner();
-        }
-        if (timer > MaxTime)
-        {
-            timer = 0.0f;
         }
     }
 
