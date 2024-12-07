@@ -12,7 +12,7 @@ public class Spaceship : MonoBehaviour
 
     private void Awake()
     {
-        FindAnyObjectByType<Projectile>();
+        FindAnyObjectByType<ProjectileSpawner>();
     }
 
     // Update is called once per frame
@@ -39,17 +39,8 @@ public class Spaceship : MonoBehaviour
 
         if (Input.GetKey(KeyCode.Space))
         {
-            FindAnyObjectByType<Projectile>().ProjectileVomit();
+            FindAnyObjectByType<ProjectileSpawner>().ProjectileVomit();
         }
-
-        Vector3 mouse = Input.mousePosition;
-        mouse = Camera.main.ScreenToWorldPoint(mouse);
-        mouse.z = 0.0f;
-
-        Vector3 direction = (mouse - transform.position).normalized;
-        //float angle = Vector3.Angle(Vector3.right, direction);
-        float angle = Vector3.SignedAngle(Vector3.right, direction, Vector3.forward);
-
 
         //teleporter doesnt work. but here it is
         if (transform.position.y > 5 || transform.position.y < -5)

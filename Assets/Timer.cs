@@ -28,11 +28,11 @@ public class Timer : MonoBehaviour
         }
         if (timer ==  8.0f)
         {
-            //RedAsteroidSpawn
+            FindAnyObjectByType<AsteroidSpawn>().AsteroidSpawner();
         }
         if (timer == 12.0f)
         {
-            FindAnyObjectByType<AsteroidSpawn>();
+            FindAnyObjectByType<AsteroidSpawn>().AsteroidSpawner();
         }
         if (timer > MaxTime)
         {
