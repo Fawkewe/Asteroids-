@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Spaceship : MonoBehaviour
 {
-    Vector3 Position;
+    Vector3 Position; 
     float Speed = 5.0f;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -12,7 +12,7 @@ public class Spaceship : MonoBehaviour
 
     private void Awake()
     {
-        FindAnyObjectByType<ProjectileSpawner>();
+        FindAnyObjectByType<ProjectileSpawner>(); //This calls Upon the other script
     }
 
     // Update is called once per frame
@@ -20,6 +20,7 @@ public class Spaceship : MonoBehaviour
     {
         float dt = Time.deltaTime;
         Position = transform.position;
+        //The controls lol.
         if (Input.GetKey(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow))
         {
             transform.position += Vector3.up * Speed * dt;
@@ -43,7 +44,7 @@ public class Spaceship : MonoBehaviour
         }
 
         //teleporter doesnt work. but here it is
-        if (transform.position.y > 5 || transform.position.y < -5)
+        if (transform.position.y > 5 || transform.position.y < -5) 
         {
             Position.y *= -1;
         }
@@ -52,5 +53,10 @@ public class Spaceship : MonoBehaviour
         {
             Position.x *= -1;
         }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        Object.Destroy(gameObject);
     }
 }

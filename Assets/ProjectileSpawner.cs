@@ -3,7 +3,6 @@ using UnityEngine;
 public class ProjectileSpawner : MonoBehaviour
 {
     public GameObject Shot;
-    Vector2 direction = Vector2.up;
 
     //none of this works thus far
 
@@ -16,8 +15,8 @@ public class ProjectileSpawner : MonoBehaviour
     void Update()
     {
     }
-    public void ProjectileVomit()
+    public void ProjectileVomit() 
     {
-        Instantiate(Shot);
+        Instantiate(Shot); //Creates a Shot 
     }
 }

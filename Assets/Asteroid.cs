@@ -4,6 +4,9 @@ public class Asteroid : MonoBehaviour
 {
     public int health;
     public float speed;
+
+    Vector2 direction = Vector2.down;
+  
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -13,14 +16,20 @@ public class Asteroid : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (health <= 0)
+        float dt = Time.deltaTime;
+        Vector3 change = direction * speed * dt;
+        transform.position += change;
+        //movement 
+
+        if (health <= 0) //The spilt function 
         {
             Object.Destroy(gameObject);
+            //have to get this to create two new Asteroids 
             //Debug.Log("works");
         }
     }
 
-    public void DamageDealt()
+    public void DamageDealt() 
     {
         int Damage = 1;
         health = health - Damage;

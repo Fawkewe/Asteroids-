@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1044844271128121262}
   - component: {fileID: 2048572972286556249}
-  - component: {fileID: 2167705864446583352}
   - component: {fileID: -7587183198252673590}
   - component: {fileID: 8486764498924590882}
   m_Layer: 0
@@ -90,25 +89,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!119 &2167705864446583352
-Projector:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8024066764344910493}
-  m_Enabled: 1
-  serializedVersion: 2
-  m_NearClipPlane: 0.1
-  m_FarClipPlane: 100
-  m_FieldOfView: 60
-  m_AspectRatio: 1
-  m_Orthographic: 0
-  m_OrthographicSize: 10
-  m_Material: {fileID: 0}
-  m_IgnoreLayers:
-    serializedVersion: 2
-    m_Bits: 0
 --- !u!114 &-7587183198252673590
 MonoBehaviour:
   m_ObjectHideFlags: 0

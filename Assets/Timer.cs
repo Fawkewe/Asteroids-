@@ -6,7 +6,7 @@ using UnityEngine;
 public class Timer : MonoBehaviour  
 {
     public float timer = 0.0f; //Calculates the seconds
-    // Start is called before the first frame update
+
     void Awake()
     {
         FindAnyObjectByType<AsteroidSpawn>();
