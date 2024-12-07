@@ -5,7 +5,7 @@ public class Asteroid : MonoBehaviour
     public int health;
     public float speed;
 
-    Vector2 direction = Vector2.down;
+    Vector2 direction = Vector2.right;
   
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()

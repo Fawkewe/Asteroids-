@@ -2,26 +2,31 @@ using UnityEngine;
 
 public class AsteroidSpawn : MonoBehaviour
 {
+    public float timer = 0.0f;
     public GameObject Asteroid;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-
+        AsteroidSpawner();
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        //    timer += Time.deltaTime;
+        //    if (timer % 4 == 0) 
+        //    {
+        //        AsteroidSpawner();
+        //    }
     }
 
     public void AsteroidSpawner()
-    { //Up
-        for (int i = -4; i < 5; i++)
-        {
-            Vector3 spawnPosition = new Vector3(i * 2.0f, 4.0f);
-            Instantiate(Asteroid, spawnPosition, Quaternion.identity);
-        }
+    { 
+       var positionLeft = new Vector3(-10.0f, Random.Range(-4.0f, 4.0f),0);
+       Instantiate(Asteroid, positionLeft, Quaternion.identity);
+
+       var positionRight = new Vector3(10.0f, Random.Range(-4.0f,4.0f),0);
+       Instantiate(Asteroid, positionRight, Quaternion.identity);
     }
 }
 
