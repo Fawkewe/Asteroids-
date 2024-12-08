@@ -7,7 +7,7 @@ public class AsteroidSpawn : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        AsteroidSpawner();
+        // AsteroidSpawner();
     }
 
     // Update is called once per frame
@@ -22,6 +22,7 @@ public class AsteroidSpawn : MonoBehaviour
 
     public void AsteroidSpawner()
     { 
+       //The Asteroids spawner. The Y range is random but the X range is always the same. The last number is the unused Z axis
        var positionLeft = new Vector3(-10.0f, Random.Range(-4.0f, 4.0f),0);
        Instantiate(Asteroid, positionLeft, Quaternion.identity);
 
