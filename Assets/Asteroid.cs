@@ -68,4 +68,9 @@ public class Asteroid : MonoBehaviour
         int Damage = 1;
         health = health - Damage;
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        DamageDealt();
+    }
 }

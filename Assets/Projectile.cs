@@ -30,4 +30,10 @@ public class Projectile : MonoBehaviour
         Object.Destroy(gameObject);
     }
 
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        Hit();
+        FindAnyObjectByType<Asteroid>().DamageDealt();
+    }
+
 }

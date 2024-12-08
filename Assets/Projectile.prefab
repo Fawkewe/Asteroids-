@@ -152,3 +152,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   circle1: {fileID: 3104982045939902898, guid: 4420d88ed4197a446b92b522c4fc041a, type: 3}
   circle2: {fileID: 2772759892818204443}
+  Ship: {fileID: 4645542143126151259, guid: 77d30ecfecaf37c4c9699aad12e5776a, type: 3}
+  Asteroid: 0
+  Projectile: 1
+  Spaceship: 0
