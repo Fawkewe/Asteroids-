@@ -103,6 +103,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 1
   speed: 5
+  big: 1
+  medium: 0
+  small: 0
 --- !u!58 &-6948449220471827330
 CircleCollider2D:
   m_ObjectHideFlags: 0
