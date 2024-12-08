@@ -1,11 +1,12 @@
+using UnityEditor.AnimatedValues;
 using UnityEngine;
 
 public class AsteroidSpawn : MonoBehaviour
 {
     public float timer = 0.0f;
     public GameObject Asteroid;
-    public GameObject MediumAsteroid;
-    public GameObject SmallAsteroid;
+    //public GameObject MediumAsteroid;
+    //public GameObject SmallAsteroid;
    
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -32,18 +33,20 @@ public class AsteroidSpawn : MonoBehaviour
        var positionRight = new Vector3(10.0f, Random.Range(-4.0f,4.0f),0);
        Instantiate(Asteroid, positionRight, Quaternion.identity);
     }
-    public void OrangeAsteroidSpawner()
-    {
-        Instantiate(MediumAsteroid);
+    //public void OrangeAsteroidSpawner()
+    //{
+    //    var OrangeSpawn = Asteroid.transform.position;
+    //    Instantiate(MediumAsteroid,OrangeSpawn,Quaternion.identity);
 
-        Instantiate(MediumAsteroid);
-    }
+    //    Instantiate(MediumAsteroid,OrangeSpawn, Quaternion.identity);
+    //}
 
-    public void YellowAsteroidSpawner()
-    {
-        Instantiate(SmallAsteroid);
+    //public void YellowAsteroidSpawner()
+    //{
+    //    var YellowSpawn = MediumAsteroid.transform.position;
+    //    Instantiate(SmallAsteroid, YellowSpawn,Quaternion.identity);
 
-        Instantiate(SmallAsteroid);
-    }
+    //    Instantiate(SmallAsteroid,YellowSpawn,Quaternion.identity);
+    //}
 }
 

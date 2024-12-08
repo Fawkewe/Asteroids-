@@ -17,7 +17,7 @@ public class Timer : MonoBehaviour
     {
         timer += Time.deltaTime;
 
-        if (timer%4== 0) //spawns every 4 seconds. 
+        if (timer%2== 0) //spawns every 2 seconds. 
         {
             FindAnyObjectByType<AsteroidSpawn>().AsteroidSpawner();
         }

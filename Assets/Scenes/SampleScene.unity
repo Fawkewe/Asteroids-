@@ -118,67 +118,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1001 &354679136
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 3104982045939902898, guid: 4420d88ed4197a446b92b522c4fc041a, type: 3}
-      propertyPath: m_Name
-      value: 'Asteroid '
-      objectReference: {fileID: 0}
-    - target: {fileID: 3247295485698407505, guid: 4420d88ed4197a446b92b522c4fc041a, type: 3}
-      propertyPath: health
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6276005894626822288, guid: 4420d88ed4197a446b92b522c4fc041a, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.28
-      objectReference: {fileID: 0}
-    - target: {fileID: 6276005894626822288, guid: 4420d88ed4197a446b92b522c4fc041a, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 3.41
-      objectReference: {fileID: 0}
-    - target: {fileID: 6276005894626822288, guid: 4420d88ed4197a446b92b522c4fc041a, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6276005894626822288, guid: 4420d88ed4197a446b92b522c4fc041a, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6276005894626822288, guid: 4420d88ed4197a446b92b522c4fc041a, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6276005894626822288, guid: 4420d88ed4197a446b92b522c4fc041a, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6276005894626822288, guid: 4420d88ed4197a446b92b522c4fc041a, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6276005894626822288, guid: 4420d88ed4197a446b92b522c4fc041a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6276005894626822288, guid: 4420d88ed4197a446b92b522c4fc041a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6276005894626822288, guid: 4420d88ed4197a446b92b522c4fc041a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 4420d88ed4197a446b92b522c4fc041a, type: 3}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -411,7 +350,6 @@ GameObject:
   - component: {fileID: 796052635}
   - component: {fileID: 796052634}
   - component: {fileID: 796052637}
-  - component: {fileID: 796052636}
   m_Layer: 0
   m_Name: Asteroids
   m_TagString: Untagged
@@ -433,8 +371,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timer: 0
   Asteroid: {fileID: 3104982045939902898, guid: 4420d88ed4197a446b92b522c4fc041a, type: 3}
-  MediumAsteroid: {fileID: 7949304412699377244, guid: f9c29b534b1108c458a4b3d3a1fc5d07, type: 3}
-  SmallAsteroid: {fileID: 6309585283483156921, guid: 4e4bdc082c2acba42a57398d93f7e8f0, type: 3}
 --- !u!4 &796052635
 Transform:
   m_ObjectHideFlags: 0
@@ -450,19 +386,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &796052636
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 796052633}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 095c025bb018b574e82f73dd58aee93c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Shot: {fileID: 8024066764344910493, guid: 2fb6becaee649f64086381b4c55b3620, type: 3}
 --- !u!114 &796052637
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -507,6 +430,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5864e6b16f7a4d341916e365e25f11f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Shot: {fileID: 8024066764344910493, guid: 2fb6becaee649f64086381b4c55b3620, type: 3}
 --- !u!212 &1530942695
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -635,4 +559,3 @@ SceneRoots:
   - {fileID: 619394802}
   - {fileID: 796052635}
   - {fileID: 1530942696}
-  - {fileID: 354679136}

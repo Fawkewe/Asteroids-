@@ -106,6 +106,8 @@ MonoBehaviour:
   big: 0
   medium: 0
   small: 1
+  MediumAsteroid: {fileID: 7949304412699377244, guid: f9c29b534b1108c458a4b3d3a1fc5d07, type: 3}
+  SmallAsteroid: {fileID: 6309585283483156921}
 --- !u!58 &-7146285857329937450
 CircleCollider2D:
   m_ObjectHideFlags: 0

@@ -2,19 +2,15 @@ using UnityEngine;
 
 public class Spaceship : MonoBehaviour
 {
-    Vector3 Position; 
+    Vector3 Position;
     float Speed = 5.0f;
+    float RotationSpeed = 35.0f;
+    public GameObject Shot;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
 
     }
-
-    private void Awake()
-    {
-        FindAnyObjectByType<ProjectileSpawner>(); //This calls Upon the other script
-    }
-
     // Update is called once per frame
     void Update()
     {
@@ -38,9 +34,15 @@ public class Spaceship : MonoBehaviour
             transform.position += Vector3.left * Speed * dt;
         }
 
-        if (Input.GetKey(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
-            FindAnyObjectByType<ProjectileSpawner>().ProjectileVomit();
+            var ShotSpawn = transform.position;
+            Instantiate(Shot,ShotSpawn,Quaternion.identity);
+        }
+
+        if (Input.GetMouseButton(0))
+        {
+            this.transform.Rotate(Input.mousePosition, RotationSpeed * dt);
         }
 
         //teleporter doesnt work. but here it is
