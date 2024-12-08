@@ -25,9 +25,8 @@ public class Projectile : MonoBehaviour
         //all of this is dictating the movement 
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    public void Hit()
     {
-        FindAnyObjectByType<Asteroid>().DamageDealt();
         Object.Destroy(gameObject);
     }
 

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6407658166494594954}
   - component: {fileID: -725122064019729974}
   - component: {fileID: -7146285857329937450}
+  - component: {fileID: -4057305433254226351}
   m_Layer: 0
   m_Name: Asteroid Small
   m_TagString: Untagged
@@ -144,3 +145,17 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 0.5
+--- !u!114 &-4057305433254226351
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6309585283483156921}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 454f26e923e77f14193a4bb1b6584a93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  circle1: {fileID: 6309585283483156921}
+  circle2: {fileID: 2772759892818204443, guid: fb20d3b6a3ccdac40b0419fa33009fb3, type: 3}

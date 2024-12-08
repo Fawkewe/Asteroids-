@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1422704082200248102}
   - component: {fileID: 1957063877002991096}
   - component: {fileID: 6065778036646290663}
+  - component: {fileID: 5218681336659923834}
   m_Layer: 0
   m_Name: AsteroidMedium
   m_TagString: Untagged
@@ -144,3 +145,17 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 0.5
+--- !u!114 &5218681336659923834
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7949304412699377244}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 454f26e923e77f14193a4bb1b6584a93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  circle1: {fileID: 7949304412699377244}
+  circle2: {fileID: 2772759892818204443, guid: fb20d3b6a3ccdac40b0419fa33009fb3, type: 3}
