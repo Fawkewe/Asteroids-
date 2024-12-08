@@ -137,14 +137,10 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4645542143126151259}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 454f26e923e77f14193a4bb1b6584a93, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   circle1: {fileID: 3104982045939902898, guid: 4420d88ed4197a446b92b522c4fc041a, type: 3}
   circle2: {fileID: 2772759892818204443, guid: fb20d3b6a3ccdac40b0419fa33009fb3, type: 3}
-  Ship: {fileID: 4645542143126151259}
-  Asteroid: 0
-  Projectile: 0
-  Spaceship: 1

@@ -17,7 +17,7 @@ public class CircleCollision : MonoBehaviour
     private void Awake()
     {
         FindAnyObjectByType<Asteroid>();
-        FindAnyObjectByType<Spaceship>();
+        FindAnyObjectByType<Projectile>();
     }
 
     void Update()

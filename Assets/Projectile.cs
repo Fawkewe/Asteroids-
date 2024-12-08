@@ -35,5 +35,4 @@ public class Projectile : MonoBehaviour
         Hit();
         FindAnyObjectByType<Asteroid>().DamageDealt();
     }
-
 }

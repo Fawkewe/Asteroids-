@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 221307445343717813}
   - component: {fileID: 1422704082200248102}
   - component: {fileID: 1957063877002991096}
-  - component: {fileID: 6065778036646290663}
   - component: {fileID: 5218681336659923834}
+  - component: {fileID: 5866022376150796189}
   m_Layer: 0
   m_Name: AsteroidMedium
   m_TagString: Untagged
@@ -109,42 +109,6 @@ MonoBehaviour:
   small: 0
   MediumAsteroid: {fileID: 7949304412699377244}
   SmallAsteroid: {fileID: 6309585283483156921, guid: 4e4bdc082c2acba42a57398d93f7e8f0, type: 3}
---- !u!58 &6065778036646290663
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7949304412699377244}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_CompositeOperation: 0
-  m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_Radius: 0.5
 --- !u!114 &5218681336659923834
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -152,14 +116,37 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7949304412699377244}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 454f26e923e77f14193a4bb1b6584a93, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   circle1: {fileID: 7949304412699377244}
   circle2: {fileID: 2772759892818204443, guid: fb20d3b6a3ccdac40b0419fa33009fb3, type: 3}
-  Ship: {fileID: 4645542143126151259, guid: 77d30ecfecaf37c4c9699aad12e5776a, type: 3}
-  Asteroid: 1
-  Projectile: 0
-  Spaceship: 0
+--- !u!50 &5866022376150796189
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7949304412699377244}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
