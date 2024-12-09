@@ -10,13 +10,13 @@ public class AsteroidSpawn : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        //AsteroidSpawner();
+        AsteroidSpawner();
     }
 
     // Update is called once per frame
     void Update()
     {
-        AsteroidSpawner();
+        //AsteroidSpawner();
     }
 
     public void AsteroidSpawner()
@@ -30,7 +30,6 @@ public class AsteroidSpawn : MonoBehaviour
         var positionRight = new Vector3(10.0f, Random.Range(-4.0f, 4.0f), 0);
         Instantiate(Asteroid, positionRight, Quaternion.identity);
         Instantiate(Asteroid, positionRight, Quaternion.identity);
-
         if (timer % 4 == 0)
         {
             Instantiate(Asteroid, positionLeft, Quaternion.identity);

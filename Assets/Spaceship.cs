@@ -1,5 +1,7 @@
 using UnityEngine;
 using static UnityEditor.Searcher.SearcherWindow.Alignment;
+using UnityEngine.SceneManagement;
+using Unity.VisualScripting;
 
 public class Spaceship : MonoBehaviour
 {
@@ -8,6 +10,8 @@ public class Spaceship : MonoBehaviour
     float RotationSpeed = 100.0f;
     public GameObject Shot;
     private Rigidbody2D Rigidbody;
+
+    bool CanSpawnShot = true;
 
     Renderer[] Renderers;
     bool iswarpingX = false;
@@ -52,7 +56,7 @@ public class Spaceship : MonoBehaviour
             transform.position += Vector3.left * Speed * dt;
         }
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && CanSpawnShot == true)
         {
             var ShotSpawn = transform.position;
             Instantiate(Shot,ShotSpawn,Quaternion.identity);
@@ -100,4 +104,23 @@ public class Spaceship : MonoBehaviour
 
         return false;
    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        Object.Destroy(gameObject);
+        SceneManager.LoadScene("Game.Over");
+    }
+    public void PauseShip()
+  {
+        Speed = 0.0f;
+        RotationSpeed = 0.0f;
+        CanSpawnShot = false;
+  }
+  public void UnPauseShip()
+    {
+        Speed = 5.0f;
+        RotationSpeed = 100.0f;
+        CanSpawnShot = true;
+    }
+
 }
+

@@ -73,4 +73,13 @@ public class Asteroid : MonoBehaviour
     {
         DamageDealt();
     }
+
+    public void PauseAsteroid()
+    {
+        speed = 0.0f; 
+    }
+    public void UnPauseAsteroid()
+    {
+        speed = 5.0f;
+    }
 }
