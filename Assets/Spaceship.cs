@@ -5,6 +5,10 @@ using Unity.VisualScripting;
 
 public class Spaceship : MonoBehaviour
 {
+    [SerializeField] private AudioClip spaceshipSoundClip;
+    [SerializeField] private AudioClip fireSoundClip;
+    [SerializeField] private AudioClip explosionSoundClip;
+
     Vector3 Position;
     float Speed = 5.0f;
     float RotationSpeed = 100.0f;
@@ -42,24 +46,29 @@ public class Spaceship : MonoBehaviour
         if (Input.GetKey(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow))
         {
             transform.position += Vector3.up * Speed * dt;
+            AudioSource.PlayClipAtPoint(spaceshipSoundClip, transform.position, 1f);
         }
         if (Input.GetKey(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow))
         {
             transform.position += Vector3.down * Speed * dt;
+            AudioSource.PlayClipAtPoint(spaceshipSoundClip, transform.position, 1f);
         }
         if (Input.GetKey(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow))
         {
             transform.position += Vector3.right * Speed * dt;
+            AudioSource.PlayClipAtPoint(spaceshipSoundClip, transform.position, 1f);
         }
         if (Input.GetKey(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow))
         {
             transform.position += Vector3.left * Speed * dt;
+            AudioSource.PlayClipAtPoint(spaceshipSoundClip, transform.position, 1f);
         }
 
         if (Input.GetKeyDown(KeyCode.Space) && CanSpawnShot == true)
         {
             var ShotSpawn = transform.position;
             Instantiate(Shot,ShotSpawn,Quaternion.identity);
+            AudioSource.PlayClipAtPoint(fireSoundClip, transform.position, 1f);
         }
     }
 
@@ -108,6 +117,7 @@ public class Spaceship : MonoBehaviour
     {
         Object.Destroy(gameObject);
         SceneManager.LoadScene("Game.Over");
+        AudioSource.PlayClipAtPoint(explosionSoundClip, transform.position, 1f);
     }
     public void PauseShip()
   {

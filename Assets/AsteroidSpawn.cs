@@ -5,12 +5,13 @@ public class AsteroidSpawn : MonoBehaviour
 {
     public float timer = 0.0f;
     public GameObject Asteroid;
-
+    [SerializeField] private AudioClip gameSoundClip;
    
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         AsteroidSpawner();
+        AudioSource.PlayClipAtPoint(gameSoundClip, transform.position, 1f);
     }
 
     // Update is called once per frame

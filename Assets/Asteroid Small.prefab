@@ -102,6 +102,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d55b9b42c37df854d8247a5dd28c9039, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  explosionSoundClip: {fileID: 8300000, guid: d1e1d8d4bc11d054f9c76805397e7238, type: 3}
   health: 1
   speed: 5
   big: 0

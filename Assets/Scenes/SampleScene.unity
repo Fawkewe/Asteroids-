@@ -371,6 +371,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timer: 0
   Asteroid: {fileID: 3104982045939902898, guid: 4420d88ed4197a446b92b522c4fc041a, type: 3}
+  gameSoundClip: {fileID: 8300000, guid: 9c5c4ab2c1d1974478c43f2b4cb9530e, type: 3}
 --- !u!4 &796052635
 Transform:
   m_ObjectHideFlags: 0

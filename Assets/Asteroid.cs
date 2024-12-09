@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class Asteroid : MonoBehaviour
 {
+    [SerializeField] private AudioClip explosionSoundClip;
     public int health;
     public float speed;
 
@@ -43,6 +44,7 @@ public class Asteroid : MonoBehaviour
             Instantiate(MediumAsteroid, OrangeSpawn, Quaternion.identity);
 
             Instantiate(MediumAsteroid, OrangeSpawn, Quaternion.identity);
+            AudioSource.PlayClipAtPoint(explosionSoundClip, transform.position, 1f);
 
         }
         if (health <= 0 && medium)
@@ -52,6 +54,7 @@ public class Asteroid : MonoBehaviour
             Instantiate(SmallAsteroid, YellowSpawn, Quaternion.identity);
 
             Instantiate(SmallAsteroid, YellowSpawn, Quaternion.identity);
+            AudioSource.PlayClipAtPoint(explosionSoundClip, transform.position, 1f);
             //FindAnyObjectByType<AsteroidSpawn>().YellowAsteroidSpawner();
         } 
         
@@ -60,6 +63,7 @@ public class Asteroid : MonoBehaviour
             Object.Destroy(gameObject);
             //have to get this to create two new Asteroids 
             //Debug.Log("works");
+            AudioSource.PlayClipAtPoint(explosionSoundClip, transform.position, 1f);
         }
     }
 

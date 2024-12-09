@@ -1,2 +1,13 @@
 fileFormatVersion: 2
 guid: ddc54c81bfebbac4fbc455df9e6c1bbf
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - Asteroid: {instanceID: 0}
+  - gameSoundClip: {fileID: 8300000, guid: 9c5c4ab2c1d1974478c43f2b4cb9530e, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

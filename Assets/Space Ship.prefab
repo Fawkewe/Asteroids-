@@ -102,6 +102,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5864e6b16f7a4d341916e365e25f11f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spaceshipSoundClip: {fileID: 8300000, guid: 819bac007e6eb1745aebd0cb1ab8a752, type: 3}
+  fireSoundClip: {fileID: 8300000, guid: 42737ea5a9f9fcf4eb98398bc15e4548, type: 3}
+  explosionSoundClip: {fileID: 8300000, guid: d1e1d8d4bc11d054f9c76805397e7238, type: 3}
+  gameSoundClip: {fileID: 8300000, guid: 9c5c4ab2c1d1974478c43f2b4cb9530e, type: 3}
   Shot: {fileID: 2772759892818204443, guid: fb20d3b6a3ccdac40b0419fa33009fb3, type: 3}
 --- !u!50 &5139774215921513313
 Rigidbody2D:
