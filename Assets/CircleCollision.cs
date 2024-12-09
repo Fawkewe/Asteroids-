@@ -5,6 +5,10 @@ public class CircleCollision : MonoBehaviour
     public GameObject circle1;
     public GameObject circle2;
 
+
+
+   // public GameObject SpaceShip;
+
     void Start()
     {
         
@@ -13,14 +17,14 @@ public class CircleCollision : MonoBehaviour
     private void Awake()
     {
         FindAnyObjectByType<Asteroid>();
+        FindAnyObjectByType<Projectile>();
     }
 
     void Update()
     {
         bool collision = CheckCollisionCircles(circle1.transform.position, circle2.transform.position, 0.5f, 0.5f);
-        //Color color = collision ? Color.red : Color.green;
-        circle1.GetComponent<SpriteRenderer>();//.color = color;
-        circle2.GetComponent<SpriteRenderer>();//.color = color;
+        circle1.GetComponent<SpriteRenderer>();
+        circle2.GetComponent<SpriteRenderer>();
 
         // Mtv points FROM 2 TO 1
         Vector2 mtv = Vector3.zero;
@@ -59,7 +63,6 @@ public class CircleCollision : MonoBehaviour
                 FindAnyObjectByType<Projectile>().Hit();
                 Debug.Log("collision");
             }
-
         }
         else
         {

@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 6276005894626822288}
   - component: {fileID: 1629289710140007939}
   - component: {fileID: 3247295485698407505}
-  - component: {fileID: -6948449220471827330}
   - component: {fileID: -6574208847498405825}
+  - component: {fileID: 2364778653405250120}
   m_Layer: 0
   m_Name: 'Asteroid '
   m_TagString: Untagged
@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 3104982045939902898}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.1519262, y: 1.1970603, z: 0}
+  m_LocalPosition: {x: -1.8109328, y: 4.349103, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -103,48 +103,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 1
-  speed: 0
+  speed: 5
   big: 1
   medium: 0
   small: 0
   MediumAsteroid: {fileID: 7949304412699377244, guid: f9c29b534b1108c458a4b3d3a1fc5d07, type: 3}
   SmallAsteroid: {fileID: 6309585283483156921, guid: 4e4bdc082c2acba42a57398d93f7e8f0, type: 3}
---- !u!58 &-6948449220471827330
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3104982045939902898}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_CompositeOperation: 0
-  m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_Radius: 0.5
 --- !u!114 &-6574208847498405825
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -152,10 +116,37 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3104982045939902898}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 454f26e923e77f14193a4bb1b6584a93, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   circle1: {fileID: 3104982045939902898}
   circle2: {fileID: 2772759892818204443, guid: fb20d3b6a3ccdac40b0419fa33009fb3, type: 3}
+--- !u!50 &2364778653405250120
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3104982045939902898}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
